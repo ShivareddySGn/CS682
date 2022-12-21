@@ -10,23 +10,29 @@ import Adminsignin from "./Adminsignin";
 import Signup from "./Signup";
 import Adminactivities from "./Adminactivities";
 import { Route, Routes } from 'react-router-dom';
+
+// List of pages that can be accessed by the admin
 const pages = ["Adminsignin", "Adminactivities","signup"];
 
+// The main component for the routing system
 const App = () => {
-    
+    // Return the JSX for the component
     return ( 
+    // Wrapper div for the component
     <div className="App">
-    <Routes>
-      <Route path="/" element={<Home />}/>
-      <Route path="/Adminsignin" element={<Adminsignin />}/>
-      <Route path="/Signup" element={<Signup />}/>
-      <Route path="/Adminactivities" element={<Adminactivities />}/>
-    </Routes>
-  </div>);
-        
-         
-    
-
+        {/* Routes component for defining the application routes */}
+        <Routes>
+            {/* Route component for the home page */}
+            <Route path="/" element={<Home />}/>
+            {/* Route component for the admin login page */}
+            <Route path="/Adminsignin" element={<Adminsignin />}/>
+            {/* Route component for the sign up page */}
+            <Route path="/Signup" element={<Signup />}/>
+            {/* Route component for the admin dashboard page */}
+            <Route path="/Adminactivities" element={<Adminactivities />}/>
+        </Routes>
+    </div>);
 }
-export default App;  
 
+// Export the component as the default export
+export default App;  
