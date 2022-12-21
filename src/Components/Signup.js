@@ -6,12 +6,16 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
 import { useState } from 'react';
 import axios from 'axios';
+// pages is an array of strings representing different pages in the application
+// formData is a state variable that holds the form data as an object
 const pages = ["Adminsignin", "Adminactivities", 'Home'];
 const [formData, setFormData] = useState({
   email: '',
   password: '',
   telephone: '',
 });
+// handleSubmit is called when the form is submitted
+// it prevents the default form submission behavior and sends a POST request to the /api/users endpoint with the form data
 const handleSubmit = (event) => {
   event.preventDefault();
 
@@ -26,6 +30,7 @@ const handleSubmit = (event) => {
       // show an error message
     });
 };
+// signup is a functional component that renders a form for users to sign up for an account
 const signup=()=>{
 
     const paperStyle={padding :20,height:'70vh',width:280, margin:"20px auto"}
