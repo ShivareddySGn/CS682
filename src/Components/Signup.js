@@ -4,9 +4,28 @@ import { Grid,Paper, Avatar, TextField, Button, Typography,Link } from '@materia
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
+import { useState } from 'react';
+import axios from 'axios';
 const pages = ["Adminsignin", "Adminactivities", 'Home'];
+const [formData, setFormData] = useState({
+  email: '',
+  password: '',
+  telephone: '',
+});
+const handleSubmit = (event) => {
+  event.preventDefault();
 
-
+  axios
+    .post('/api/users', formData)
+    .then((response) => {
+      console.log(response.data);
+      // redirect to the login page or show a success message
+    })
+    .catch((error) => {
+      console.error(error);
+      // show an error message
+    });
+};
 const signup=()=>{
 
     const paperStyle={padding :20,height:'70vh',width:280, margin:"20px auto"}
@@ -19,10 +38,50 @@ const signup=()=>{
                      <Avatar style={avatarStyle}><LockOutlinedIcon/></Avatar>
                     <h2>Sign up</h2>
                 </Grid>
-                <TextField label='Email' placeholder='Enter Email' variant="outlined" fullWidth required/>
-                <TextField label='Create Password' placeholder='Enter password' type='password' variant="outlined" fullWidth required/>
-                <TextField label='confirm password' placeholder='Confirm password' type='password' variant="outlined" fullWidth required/>
-                <TextField label='Telephone' placeholder='Enter telephone' type='phone number' variant="outlined" fullWidth required/>
+                <TextField
+                  label="Email"
+                  placeholder="Enter Email"
+                  variant="outlined"
+                  fullWidth
+                  required
+                  onChange={(event) =>
+                    setFormData({ ...formData, email: event.target.value })
+                  }
+                />
+                <TextField
+                  label="Create Password"
+                  placeholder="Enter password"
+                  type="password"
+                  variant="outlined"
+                  fullWidth
+                  required
+                  onChange={(event) =>
+                    setFormData({ ...formData, password: event.target.value })
+                  }
+                />
+                <TextField
+                  label="Confirm password"
+                  placeholder="Confirm password"
+                  type="password"
+                  variant="outlined"
+                  fullWidth
+                  required
+                  onChange={(event) =>
+                    setFormData({ ...formData, passwordConfirm: event.target.value })
+                  }
+                />
+               <TextField
+                  label="Telephone"
+                  placeholder="Enter telephone"
+                  type="phone number"
+                  variant="outlined"
+                  fullWidth
+                  required
+                  onChange={(event) =>
+                    setFormData({ ...formData, telephone: event.target.value })
+                  }
+                />
+     
 
                 <FormControlLabel
                     control={
