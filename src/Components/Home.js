@@ -10,54 +10,71 @@ import cardimage1 from '/Users/shivareddy/Desktop/material_ui/src/Images/bg1.png
 import cardimage2 from '/Users/shivareddy/Desktop/material_ui/src/Images/LSTM.png';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import {useRef} from 'react';
+
+// pages is an array of strings representing different pages in the application
 const pages = ["Adminsignin","Adminactivities"];
+
+// useStyles is a hook that returns the styles object for the component
 const useStyles = makeStyles ((theme)=>({
-
-container : {
-    backgroundColor : theme.palette.background.paper,
-    padding : theme.spacing(8, 0, 6)
-},
-AdminButton : {
-     marginLeft:800,
-},
-cardGrid:{
-    padding:'20px'
-    
-},
-card:{
-    height:'100%',
+  // styles for the main container
+  container: {
+    backgroundColor: theme.palette.background.paper,
+    padding: theme.spacing(8, 0, 6),
+  },
+  // styles for the login button
+  AdminButton: {
+     marginLeft: 800,
+  },
+  // styles for the card grid container
+  cardGrid: {
+    padding: '20px',
+  },
+  // styles for the card
+  card: {
+    height: '100%',
     display: 'flex',
-    flexDirection : 'column',
-    
-},
-cardContent:{
-    flexGrow : '1'
-},
+    flexDirection: 'column',
+  },
+  // styles for the card content
+  cardContent: {
+    flexGrow: '1',
+  },
+  // styles for the card media (image)
+  cardMedia: {
+    paddingTop: '56.26%', //16:9
+  },
+  // styles for the browse files button
+  BrowsefilesButton: {
+    marginLeft: '800px',
+    padding: '20px',
+  },
+  // styles for the dataset button
+  dataset: {
+    marginLeft: '800px',
+    padding: '10px',
+  },
+}));
 
-cardMedia:{
-    paddingTop : '56.26%' //16:9
-},
-BrowsefilesButton:{
-    marginLeft:'800px',
-    padding:'20px',
-},
-datset:{
-    marginLeft:'800px',
-    padding:'10px',
-}
-}
+const Homepage = () => {
+  // classes is an object with the styles for the component
+  const classes = useStyles();
 
-));
-const Homepage= () => {
-    const classes = useStyles();
-    return (
-         <> 
-         <CssBaseline />
-             <AppBar position="relative" >
-                <Toolbar>
-                    <ApiTwoToneIcon />
-                    <Typography variant="h6">
-                        Framework to compare machine learning models
+  // ref is a reference to the component created with the useRef hook
+  const ref = useRef();
+
+  return (
+    <> 
+      {/* CssBaseline resets default styles for the page */}
+      <CssBaseline />
+      {/* AppBar displays a navbar at the top of the page */}
+      <AppBar position="relative">
+        <Toolbar>
+          {/* ApiTwoToneIcon is a custom icon component */}
+          <ApiTwoToneIcon />
+          <Typography variant="h6">
+            Framework to compare machine learning models
+          
+
                     </Typography>
                     <div className={classes.AdminButton}>
                     <Grid  containerspacing= {2} justify="flex-end">
