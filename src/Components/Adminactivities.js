@@ -74,6 +74,7 @@ const Adminactivities = () => {
                 </div>
             </Container>
             </main>
+
         </>
     );
 }
