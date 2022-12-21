@@ -191,5 +191,6 @@ const Homepage = () => {
     );
 
 }
+// Export the component as the default export
 export default Homepage;  
 
