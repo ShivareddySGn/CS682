@@ -141,10 +141,11 @@ const Homepage = () => {
                             <CardMedia className={classes.cardMedia} image = {cardimage2} title = "Temporal Convolutional Networks" />
                                 <CardContent className={classes.cardContent}>
                                     <Typography gutterBottom variant="h5">
-                                    Temporal Convolutional Networks 
+                                     Long short-term memory
                                     </Typography>
                                     <Typography>
-                                    In deep learning, a TCN is a class of artificial neural network, most commonly applied to analyze visual imagery.They have applications in image and video recognition, recommender systems, image classification, image segmentation, medical image analysis, natural language processing, brain–computer interfaces, and financial time series.
+                                     In deep learning, a LSTM is a class of artificial neural network, most commonly applied to analyze visual imagery.They have applications in image and video recognition, recommender systems, image classification, image segmentation, medical image analysis, natural language processing, brain–computer interfaces, and financial time series.
+
                                     </Typography>
                                 </CardContent>
                                 <CardActions>
