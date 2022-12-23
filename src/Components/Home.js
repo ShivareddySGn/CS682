@@ -171,7 +171,7 @@ const Homepage = () => {
 
             </Container>
             <Container>
-                <div className={classes.BrowsefilesButton}>
+                 <div className={classes.BrowsefilesButton}>
                 <input
                     type="file"
                     accept="image/*"
@@ -179,12 +179,13 @@ const Homepage = () => {
                     id="contained-button-file"
                 />
                     <label htmlFor="contained-button-file">
-                    <Button variant="contained" color="primary" component="span" size="large" > Browse files</Button>
+                    
+                    <a href="http://localhost:8501" target="_blank">
+
+                    <Button  variant="contained" color="primary" component="span" size="large" > Next</Button>
+                    </a>
                     </label>
                     
-                </div>
-                <div className={classes.datset}>
-                    <Button size="large" variant="contained" color="primary">  Upload dataset</Button>
                 </div>
             </Container>
         </main>
