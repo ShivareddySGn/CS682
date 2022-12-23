@@ -22,10 +22,10 @@ const App = () => {
     <div className="App">
         {/* Routes component for defining the application routes */}
         <Routes>
-            {/* Route component for the home page */}
-            <Route path="/" element={<Home />}/>
-            {/* Route component for the admin login page */}
-            <Route path="/Adminsignin" element={<Adminsignin />}/>
+            {/* Route component for the adminsignin page */}
+          <Route path="/" element={<Adminsignin />}/>
+            {/* Route component for the admin Home page */}
+            <Route path="/Home" element={<Home />}/>
             {/* Route component for the sign up page */}
             <Route path="/Signup" element={<Signup />}/>
             {/* Route component for the admin dashboard page */}
