@@ -45,8 +45,8 @@ const Adminsignin=()=>{
             <Link href="Adminactivities">   <Button type='submit' color='primary' variant="contained" style={btnstyle} fullWidth >Sign in</Button> </Link> 
                 {/* Typography component for the password reset link */}
                 <Typography >
-                     <Link href="#" >
-                        Forgot password ?
+                     <Link href="Home" >
+                        Not an Admin ?
                 </Link>
                 </Typography>
                 {/* Typography component for the sign up link */}
